@@ -13,27 +13,30 @@
 #include <string.h>
 #include <math.h>
 
-
-/* Structures */
-struct data {
-    int value;
+enum {
+    FIRST=1,
+    SECOND,
+    THIRD
 };
-typedef struct data data_t;
-struct fifo {
-    int data;
-    struct fifo next;
-};
-typedef struct fifo fifo_t;
-
-/* Prototypes */
-fifo_t fifo_init(data_t info);
-fifo_pop()
-fifo_push()
-
 
 int
 main (int argc, char *argv[]) {
-    printf("Hello world\n");
+    int choice;
+    scanf("%d", &choice);
+    switch(choice) {
+        case(FIRST):
+            printf("This is menu option 1\n"); 
+            break;
+        case(SECOND):
+            printf("This is menu option 2\n"); 
+            break;
+        case(THIRD):
+            printf("This is menu option 3\n"); 
+            break;
+        default:
+            printf("This is the default option. No valid choice.\n"); 
+            break;
+    }
 
     return 0;
 }
